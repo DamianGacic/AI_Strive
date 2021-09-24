@@ -1,0 +1,2 @@
+
+customer1 = input("")

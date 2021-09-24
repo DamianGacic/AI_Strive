@@ -1,0 +1,118 @@
+{
+  "intents": [
+    {
+      "tag": "crisis",
+      "patterns": [
+        "I wish to die",
+        "I'm going to kill myself",
+        "What's the point of it all",
+        "Suicide",
+        "Hanging",
+        "OD",
+        "an overdose",
+        "I want to commit suicide",
+        "emergency"
+      ],
+      "responses": [
+        "Call Samaritans on 116 123",
+        "That's a shame, call 999 for advice."
+      ]
+    },
+
+    {
+      "tag": "appointment",
+      "patterns": [
+        "I would like to make an appointment",
+        "I would like to schedule an appointment",
+        "are you free on Saturday",
+        "can i schedule a visit",
+        "i want to see my doctor",
+        "come over",
+        "visit you",
+        "when",
+        "time",
+        "when is a doctor available",
+        "timeslots"
+      ],
+      "responses": [
+        "would you like to schedule an appointment?"
+      ]
+    },
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "Hey",
+        "How are you",
+        "Is anyone there?",
+        "Hello",
+        "Good day",
+        "Good evening",
+        "Good night"
+      ],
+      "responses": [
+        "Hey!",
+        "Hello, thanks for visiting",
+        "Hi there, what can I do for you?",
+        "Hi there, how can I help?",
+        "What's up?"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["Bye", "See you later", "Goodbye"],
+      "responses": [
+        "See you later, thanks for visiting",
+        "Have a nice day",
+        "Bye! Come back again soon."
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": ["Thanks", "Thank you", "That's helpful", "Thank's a lot!"],
+      "responses": ["Happy to help!", "Any time!", "My pleasure"]
+    },
+    
+    {
+      "tag": "payments",
+      "patterns": [
+        "Do you take credit cards?",
+        "Do you accept Mastercard?",
+        "Can I pay with Apple Pay or Paypal?",
+        "Can I pay with cash?"
+      ],
+      "responses": [
+        "We accept VISA, Mastercard and Paypal",
+        "We accept most major credit cards, and Paypal",
+        "We prefer not using cash."
+      ]
+    },
+    {
+      "tag": "delivery",
+      "patterns": [
+        "How long does delivery take?",
+        "How long does shipping take?",
+        "When do I get my delivery?"
+      ],
+      "responses": [
+        "Delivery takes 15-20 min, depending on the traffic",
+        "The deliverer will be there in a few minutes. Stay tuned!",
+        "Don't worry, we're very quick!"
+      ]
+    },
+    {
+      "tag": "miscellaneous",
+      "patterns": [
+        "Tell me a joke!",
+        "Tell me something funny!",
+        "Let me laugh!"
+      ],
+      "responses": [
+        "Why did the hipster burn his mouth? He drank the coffee before it was cool.",
+        "What did the buffalo say when his son left for college? Bison.",
+        "Why do bees have sticky hair? Because they use honeycombs",
+        "Hear about the new restaurant called 'Karma'? There's no menu: you get what you deserve."
+      ]
+    }
+  ]
+}
