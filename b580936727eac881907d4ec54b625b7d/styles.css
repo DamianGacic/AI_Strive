@@ -1,0 +1,9 @@
+h1 {
+    color: red;
+    /* height: 100vh; */
+    /* background-color: blue; */
+}
+
+img {
+    max-width: 150px;
+}
