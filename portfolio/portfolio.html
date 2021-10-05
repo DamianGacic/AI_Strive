@@ -1,0 +1,153 @@
+!DOCTYPE html>
+<html>
+    <head>
+        <title>My Portfolio</title>
+        <link rel="stylesheet" href="test.css">
+    </head>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("me.jpg");
+  height: 100%;
+  width:  100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: static;
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.hero-text button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 10px 25px;
+  color: black;
+  background-color: #ddd;
+  text-align: center;
+  cursor: pointer;
+}
+
+.hero-text button:hover {
+  background-color: #555;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<div class="hero-image">
+  <div class="hero-text">
+    <h1 style="font-size:50px">I am Damian Gacic</h1>
+    <p>im a software developer looking for projects</p>
+  </div>
+</div>
+
+<p>
+    <h2>A list of some of my projects in no particular order</h2>
+<ul type = "1">
+    <li>a chatbot in python
+        <a href='https://github.com/DamianGacic/AI_Strive/tree/main/nlp/3.%20Chatbot'style="color: blue">
+            <img src="chatbot.jpg"
+                 alt="chatbot in python" 
+                 width="255"
+                 height="290"/> chatbot github repo
+        </a>
+    </li>
+    <li> a greenscreen tool using opencv
+      <a href='https://github.com/DamianGacic/AI_Strive/tree/main/greenscreen%20project'style="color: green">
+          <img src="greenscreen.jpg"
+               alt="greenscreen"
+               width="255"
+               height="240" /> greenscreen project github repo
+      </a>
+  </li>
+    <li> a website in html and css
+        <a href='https://github.com/DamianGacic/AI_Strive/tree/main/website'style="color: blue">
+            <img src="website.jpg"
+                 alt="" 
+                 width="305"
+                 height="290"/> webpage github repo
+        </a>
+    </li>
+
+ </ul>
+</p>
+
+<br>
+<br>
+
+<h3>My secondary education:</h3>
+<div>St. Michael Gymnasium 2008-2016</div>
+
+<h3>My relevant experience:</h3>
+<div>2019-2021: Informatik Bs.C WWU Münster </div>
+<div>may 2021-Now: full time remote bootcamp Ml/data science at Strive school</div>
+
+</body>
+<footer>
+<br>
+<br>
+    <p><a href="https://strive.school">damian.gacic@gmx.de</a></p>
+  </footer> 
+<div class="container">
+    <div class="row header">
+      <h2>CONTACT ME &nbsp;</h2>
+      <h3>Fill out the form below so i can reach you</h3>
+    </div>
+    <div class="row body">
+      <form action="#">
+        <ul>
+          
+          <li>
+            <p class="left">
+              <label for="first_name">first name</label>
+              <input type="text" name="first_name" placeholder="" />
+            </p>
+            <p class="pull-right">
+              <label for="last_name">last name</label>
+              <input type="text" name="last_name" placeholder="" />      
+            </p>
+            <p class="left">
+                <label for="company_name">company name (optional)</label>
+                <input type="text" name="company_name" placeholder="" />
+              </p>
+          </li>
+          
+          <li>
+            <p>
+              <label for="email">email <span class="req">*</span></label>
+              <input type="email" name="email" placeholder="" />
+            </p>
+          </li>        
+          <li><div class="divider"></div></li>
+          <li>
+            <label for="comments">message</label>
+            <textarea cols="46" rows="3" name="comments"></textarea>
+          </li>
+          
+          <li>
+            <input class="btn btn-submit" type="submit" value="Submit" />
+            <small>or press <strong>enter</strong></small>
+          </li>
+          
+        </ul>
+      </form>  
+    </div>
+  </div>
+</html>
