@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<!-- saved from url=(0433)https://s3.eu-west-1.amazonaws.com/eduflow-production/activity-resources/123308249301183.html?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2TAWW44RDWPS6YGR%2F20210323%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20210323T095843Z&X-Amz-Expires=600&X-Amz-SignedHeaders=host&response-content-disposition=inline%3B%20filename%2A%3DUTF-8%27%27D2.html&X-Amz-Signature=864cb66459a6fee764bbaa9b00cdc5e3aa8ed98a4cdb91aaafbfede6034cb899 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- IMPORT ALL THE BOOTSTRAP RELATED CSS & SCRIPTS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    <style>
+
+        /* Miscellaneous */
+
+        body {
+            background: linear-gradient(45deg, rgba(37,0,64,1) 0%, rgba(67,88,116,1) 100%);
+            background-attachment: fixed;
+            color: white;
+        }
+
+        section {
+            min-height: 93vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        /* EXERCISE 1
+        For all Albums we'd like to have a consistent style.
+        Create a class for:
+        - The album container
+        - The album cover
+        - The album title
+        - The album group / singer / dj
+        - The album genre
+        - The album duration
+        - etc
+        */
+
+        .album-container {
+            text-align: center;
+            padding-bottom: 1em;
+            margin: 1em;
+        }
+
+        .album-container img {
+            width: 100%;
+        }
+
+        .album-artist:after {
+            content: ' • '
+        }
+
+        .album-title {
+            margin-top: 0.50em;
+            margin-bottom: 0.25em;
+            font-size: 1.3em
+        }
+
+        .album-genre {
+
+        }
+
+        /* Ex 2 */
+
+        nav  {
+            background-color: rgba(26, 16, 34, 0.72);
+            height: 7vh;
+        }
+        
+        /* EX 6 */
+        
+        
+        .carousel-title {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-transform: lowercase;
+            color: #d1d1d1;
+            mix-blend-mode: color-burn;
+            font-weight: 900;
+        }
+        
+        /* Ex 7 */
+        .album-tapestry {
+            display: flex;
+            flex-wrap: wrap;
+            
+        }
+        
+        .squared {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            margin: 10px auto;
+        }
+        
+        
+        /* Ex 10 */
+        
+        .toggle-btn {
+            width: 100px;
+            position: sticky;
+            top: 5em;
+            right: 5em;
+            margin-left: auto;
+            margin-top: 3em;
+            z-index: 1;
+        }
+        
+        
+        /* Ex 8 */
+        
+        footer a {
+            display: inline-block;
+            margin: 0 25px;
+        }
+        
+        .insta-btn {
+            padding: 15px 45px;
+            border: none;
+            border-radius: 16px;
+            background-color: deeppink;
+            color: white;
+            font-weight: 700;
+            transition: all 0.4s;
+        }
+        
+        .insta-btn:hover {
+            filter: drop-shadow(0px 0px 10px rgba(255, 20, 147, 0.71));
+            background-color: #eb2c94;
+        }
+        
+        
+        
+        .carousel img {
+            min-height: 93vh;
+        }
+
+    </style>
+    </head>
+    <body data-new-gr-c-s-check-loaded="14.1000.0" data-gr-ext-installed="">
+
+        <!-- EXERCISE 2 
+Implement a navigation bar using the bootstrap component
+This navigation bar must be linked to every section in your page
+-->
+
+        <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Navbar</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#fav-albums">Favourite Albums</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#best-album-ever">Best album ever</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#wall-of-shame">Wall of Shame</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#best-artist-ever">Best artist ever</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#tapestry">The Tapestry Thing</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+
+        <!-- EXERCISE 3
+Create a responsive section for your favourite albums.
+In this section you should have:
+- 4 albums per row when the screen is very large
+- 3 albums per row when you are on a tablet (or a smaller window)
+- 2 albums per row when you are on a small screen
+-->
+
+        <section id="fav-albums">
+            <div class="container">
+                <div class="row py-5">
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="album-container">
+                            <img src="assets/black-holes-and-revelations.jpg" class="img-fluid">
+                            <h4 class="album-title">Black Holes and Revelations</h4>
+                            <span class="album-artist">Muse</span>
+                            <span class="album-genre">Rock</span>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="album-container">
+                            <img src="assets/end-of-aquarius.jpg" class="img-fluid">
+                            <h4 class="album-title">End of Aquarius</h4>
+                            <span class="album-artist">Droid Bishop</span>
+
+                            <span class="album-genre">Synthwave</span>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="album-container">
+                            <img src="assets/II.jpeg" class="img-fluid">
+                            <h4 class="album-title">Crystal Castles II</h4>
+                            <span class="album-artist">Crystal Castles</span>
+
+                            <span class="album-genre">Power Electronics</span>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="album-container">
+                            <img src="assets//it-takes-a-thief.jpeg" class="img-fluid">
+                            <h4 class="album-title">It Takes A Thief</h4>
+                            <span class="album-artist">Thievery Corporation</span>
+                            <span class="album-genre">Acid Jazz</span>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="album-container">
+                            <img src="assets/black-holes-and-revelations.jpg" class="img-fluid">
+                            <h4 class="album-title">Black Holes and Revelations</h4>
+                            <span class="album-artist">Muse</span>
+                            <span class="album-genre">Rock</span>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="album-container">
+                            <img src="assets/end-of-aquarius.jpg" class="img-fluid">
+                            <h4 class="album-title">End of Aquarius</h4>
+                            <span class="album-artist">Droid Bishop</span>
+
+                            <span class="album-genre">Synthwave</span>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="album-container">
+                            <img src="assets/II.jpeg" class="img-fluid">
+                            <h4 class="album-title">Crystal Castles II</h4>
+                            <span class="album-artist">Crystal Castles</span>
+
+                            <span class="album-genre">Power Electronics</span>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="album-container">
+                            <img src="assets//it-takes-a-thief.jpeg" class="img-fluid">
+                            <h4 class="album-title">It Takes A Thief</h4>
+                            <span class="album-artist">Thievery Corporation</span>
+                            <span class="album-genre">Acid Jazz</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- EXERCISE 4
+Create a section for the album review.
+Pick one of your fav albums, and create a section with:
+- Cover
+- Title
+- Band
+- Lenght
+- Genre
+- Tracklist
+- ... And whatever you think it's interesting about it!
+-->
+
+        <hr>
+
+        <section id="best-album-ever">
+            <div class="container py-5">
+                <div class="row">
+                    <div class="col-12 col-md-4">
+                        <img src="assets/la-revancha-del-tango.jpg" class="img-fluid"
+                             
+                             data-bs-toggle="collapse" data-bs-target="#best-album-description">
+                    </div>
+                    <div id="best-album-description" class="col-12 col-md-8 collapse show">
+                        <div class="d-flex flex-column justify-content-center h-100">
+                            <h4>Gotan Project - La Revancha Del Tango</h4>
+                            <div>
+                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <!-- EXERCISE 5
+Worst album list! Find out the music you don't really like or you find overrated and list it
+in this "hall of shame" chart!
+-->
+
+
+        <section id="wall-of-shame">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="text-center my-4">Wall of shame</h1>
+                    </div>
+                    <div class="col-6 col-md-4">
+                        <div class="album-container">
+                            <img src="https://placehold.it/250" class="img-fluid">
+                            <h4 class="album-title">Terrible Album #1</h4>
+                            <span>this album is terrible because yes.</span>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4">
+                        <div class="album-container">
+                            <img src="https://placehold.it/250" class="img-fluid">
+                            <h4 class="album-title">Terrible Album #1</h4>
+                            <span>this album is terrible because yes.</span>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4">
+                        <div class="album-container">
+                            <img src="https://placehold.it/250" class="img-fluid">
+                            <h4 class="album-title">Terrible Album #1</h4>
+                            <span>this album is terrible because yes.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+        </section>
+
+
+
+        <!-- EXERCISE 6
+Do you have any musician / band you admire or you are fan of?
+This section is dedicated to him / her / them!
+Feel free to experiment in this part of the page.
+-->
+
+
+        <section id="favourite-artist">
+            <div class="container-fluid">
+                <div class="row">
+                    <div id="artist-carousel" class="carousel slide px-0" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#artist-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#artist-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#artist-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="https://placehold.it/2000x1000/cb4600/?text=%20" class="d-block w-100" alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>First slide label</h5>
+                                    <p>Some representative placeholder content for the first slide.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://placehold.it/2000x1000/247921/?text=%20" class="d-block w-100" alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Second slide label</h5>
+                                    <p>Some representative placeholder content for the second slide.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://placehold.it/2000x1000/517699/?text=%20" class="d-block w-100" alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Third slide label</h5>
+                                    <p>Some representative placeholder content for the third slide.</p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#artist-carousel"  data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#artist-carousel"  data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                        
+                        <h1 class="carousel-title">BEST ARTIST EVER.</h1>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <!-- EXERCISE 7
+Just covers!
+Create a tapestry of album pictures. Every album picture must be "square" (use CSS to do that).
+Put at least 20 covers (also repeated) to have a nice effect and see how Bootstrap handles it.
+-->
+
+    <section id="tapestry">
+        
+        <div class="container">
+            <div class="row py-5">
+                <div class="col-12">
+                    <h1 class="text-center">The Tapestry Thing.</h1>
+                </div>
+                
+                <div class="col-12 album-tapestry">
+                    <img src="https://placehold.it/200x1500" class="img-fluid squared">
+                    <img src="https://placehold.it/200x1500" class="img-fluid squared">
+                    <img src="https://placehold.it/200x1500" class="img-fluid squared">
+                    <img src="https://placehold.it/200x1500" class="img-fluid squared">
+                    <img src="https://placehold.it/200x1500" class="img-fluid squared">
+                    <img src="https://placehold.it/200x1500" class="img-fluid squared">
+                    <img src="https://placehold.it/200x1500" class="img-fluid squared">
+                    <img src="https://placehold.it/200x1500" class="img-fluid squared">
+                    <img src="https://placehold.it/200x1500" class="img-fluid squared">
+                    <img src="https://placehold.it/200x1500" class="img-fluid squared">
+                    <img src="https://placehold.it/200x1500" class="img-fluid squared">
+                    <img src="https://placehold.it/200x1500" class="img-fluid squared">
+                    <img src="https://placehold.it/200x1500" class="img-fluid squared">
+                    <img src="https://placehold.it/200x1500" class="img-fluid squared">
+                    <img src="https://placehold.it/200x1500" class="img-fluid squared">
+                    <img src="https://placehold.it/200x1500" class="img-fluid squared">
+                    <img src="https://placehold.it/200x1500" class="img-fluid squared">
+                    <img src="https://placehold.it/200x1500" class="img-fluid squared">
+                    <img src="https://placehold.it/200x1500" class="img-fluid squared">
+
+                </div>
+            </div>
+        </div>
+            
+    </section>
+        
+        <!-- EXERCISE 8
+Implement a footer with some information / social links
+-->
+      
+        <footer>
+            <div class="text-center"> This example layout has been kindly brought to you by Luis Antonio, your TA. <br>
+            Don't forget to follow Strive School on Instagram, and since you're here, why not following Luis as well.</div>
+            
+            <div class="text-center my-4">
+                <a href="https://instagr.am/strive.school" target="_blank">
+                    <button class="insta-btn">instagr.am/strive.school</button>
+                </a>
+                <div class="w-100 my-4 d-md-none"></div>
+                <a href="https://instagr.am/luan.caor" target="_blank">
+                    <button class="insta-btn">instagr.am/luan.caor</button>
+                </a>
+            </div>
+            
+        </footer>
+
+
+        <!-- EXTRA:
+EXERCISE 9
+Create album details that are going to be toggled on and off by clicking on the album image
+-->
+
+        <!-- EXERCISE 10
+Add a button to each section. By clicking on it the section body appears (if hidden) or disappears (if visible)
+-->
+        
+        <script>
+        
+            window.onload = function () {
+                addToggleButtons()    
+                
+                countAlbums()
+            }
+            
+            function addToggleButtons() {
+                
+                for (let section of document.querySelectorAll("section")) {
+                    
+                    section.children[0].classList.add("collapse")
+                    section.children[0].classList.add("show")
+                    
+                    section.innerHTML = `
+                        <button class='btn btn-outline-light toggle-btn' data-bs-toggle="collapse" data-bs-target="#${section.id} > div">
+                            Show/hide section
+                        </button>
+                    ` + section.innerHTML
+                    
+                }
+            }
+            
+            function countAlbums() {
+                const albumN = document.querySelectorAll("img").length - 3
+                
+                
+                const span = document.createElement("span")
+                
+                span.classList.add("text-center")
+                span.classList.add("d-inline-block")
+                span.classList.add("w-100")
+                span.classList.add("my-4")
+                
+                span.innerHTML = "P.S. This page contains " + albumN + " albums!"
+                
+                document.querySelector("footer").appendChild(span)
+            }
+            
+            
+        </script>
+
+        <!--
+EXERCISE 11
+Add in the footer a field that counts, on page load, how many ALBUMS are on the page 
+-->
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+
+
+    </body>
+</html>
